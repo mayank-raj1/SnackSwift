@@ -9,13 +9,20 @@ import SwiftUI
 
 struct SnackSwiftTabView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TabView{
+            AppetizerListView().tabItem { 
+                Image(systemName: "menucard")
+                Text("Menu")
+            }
+            OrderView().tabItem {
+                Image(systemName: "menucard")
+                Text("Menu")
+            }
+            AccountView().tabItem {
+                Image(systemName: "menucard")
+                Text("Menu")
+            }
+        }.tint(Color.orange)
     }
 }
 

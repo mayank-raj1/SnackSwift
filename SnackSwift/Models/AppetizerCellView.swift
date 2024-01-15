@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct AppetizerCellView: View {
+    var appetizer: Appetizer
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            AppetizerRemoteImage(imageURL: appetizer.imageURL).frame(width: 120, height: 90).cornerRadius(9)
+            VStack(alignment: .leading, spacing: 5){
+                Text(appetizer.name).font(.title2)
+                Text(String(appetizer.price)).font(.title3).foregroundStyle(.secondary)
+            }.padding(.leading)
+        }
     }
 }
 
+
 #Preview {
-    AppetizerCellView()
+    AppetizerCellView(appetizer: MocData.sampleAppetizer)
 }
