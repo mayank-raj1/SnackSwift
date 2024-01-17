@@ -34,7 +34,7 @@ struct AppetizerListView: View {
             
         }
     }
-    
+     
     
 }
 
