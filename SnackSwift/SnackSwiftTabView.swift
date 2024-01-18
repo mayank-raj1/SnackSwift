@@ -15,11 +15,11 @@ struct SnackSwiftTabView: View {
                 Text("Menu")
             }
             OrderView().tabItem {
-                Image(systemName: "menucard")
+                Image(systemName: "takeoutbag.and.cup.and.straw")
                 Text("Menu")
             }
             AccountView().tabItem {
-                Image(systemName: "menucard")
+                Image(systemName: "person.fill")
                 Text("Menu")
             }
         }.tint(Color.orange)
