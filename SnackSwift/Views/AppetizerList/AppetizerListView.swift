@@ -22,7 +22,7 @@ struct AppetizerListView: View {
             }.onAppear(perform: {
                 viewModel.loadAppetisers()
             }).alert(item: $viewModel.alertItem) { aleartItem in
-                Alert(title: aleartItem.title, message: aleartItem.message, dismissButton: aleartItem.dissmissbutton)
+                Alert(title: aleartItem.title, message: aleartItem.message, dismissButton: aleartItem.dismissbutton)
             }.blur(radius: viewModel.isShowingDetailed ? 10 : 0).disabled(viewModel.isShowingDetailed ? true : false)
             
             if viewModel.isShowingDetailed{

@@ -16,7 +16,7 @@ struct SnackSwiftTabView: View {
             }
             OrderView().tabItem {
                 Image(systemName: "takeoutbag.and.cup.and.straw")
-                Text("Menu")
+                Text("Order")
             }
             AccountView().tabItem {
                 Image(systemName: "person.fill")

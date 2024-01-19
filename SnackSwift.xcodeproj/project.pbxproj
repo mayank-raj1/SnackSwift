@@ -24,6 +24,7 @@
 		E5F55A0C2B55EFFF0092D819 /* AppetizerDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F55A0B2B55EFFF0092D819 /* AppetizerDetailedView.swift */; };
 		E5F55A0E2B55F44F0092D819 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F55A0D2B55F44F0092D819 /* Extentions.swift */; };
 		E5F55A112B57E73E0092D819 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F55A102B57E73E0092D819 /* AccountViewModel.swift */; };
+		E5F55A152B5A8E440092D819 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F55A142B5A8E440092D819 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E5F55A0B2B55EFFF0092D819 /* AppetizerDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailedView.swift; sourceTree = "<group>"; };
 		E5F55A0D2B55F44F0092D819 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		E5F55A102B57E73E0092D819 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		E5F55A142B5A8E440092D819 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F559F52B52CE460092D819 /* Appetizer.swift */,
+				E5F55A142B5A8E440092D819 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				E5F55A112B57E73E0092D819 /* AccountViewModel.swift in Sources */,
 				E5F55A012B5466240092D819 /* APerror.swift in Sources */,
 				E5F559F62B52CE470092D819 /* Appetizer.swift in Sources */,
+				E5F55A152B5A8E440092D819 /* User.swift in Sources */,
 				E5F55A092B54A9E30092D819 /* RemoteImage.swift in Sources */,
 				E5F559F12B52ADC20092D819 /* AccountView.swift in Sources */,
 				E5F55A042B546CF20092D819 /* AppetizerListViewModel.swift in Sources */,
