@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SnackSwiftApp: App {
+    var order: Order = Order()
     var body: some Scene {
         WindowGroup {
-            SnackSwiftTabView()
+            SnackSwiftTabView().environmentObject(order)
         }
     }
 }

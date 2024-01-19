@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppetizerDetailedView: View {
     var appetizer: Appetizer
+    @EnvironmentObject var order: Order
     @Binding var isShowingView: Bool
     var body: some View {
         VStack{
@@ -33,7 +34,8 @@ struct AppetizerDetailedView: View {
             }.padding()
             Spacer()
             Button(action: {
-                
+                order.add(appetizer)
+                isShowingView = false
             }, label: {
                 Text("$\(appetizer.price.toString2(2)) - Add To Order").font(.title2).bold().padding(5)
             }).buttonStyle(.borderedProminent).tint(Color.orange).padding()
