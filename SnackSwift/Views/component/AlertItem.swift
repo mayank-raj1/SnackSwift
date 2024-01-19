@@ -30,4 +30,11 @@ struct AlertContext{
     static let unableToComplete = AlertItem(title: Text("Server Error"),
                                             message: Text("Unable to complete your request at this time. Please check your internet."),
                                             dissmissbutton: Alert.Button.default(Text("OK")))
+    
+    static let incompleteFields = AlertItem(title: Text("Incomplete Fields"),
+                                            message: Text("Unable to save your details, please make sure that all fields are filled."),
+                                            dissmissbutton: Alert.Button.default(Text("OK")))
+    static let invalidEmail = AlertItem(title: Text("Invalid Email"),
+                                            message: Text("Unable to save your details, please make sure that your email is correct."),
+                                            dissmissbutton: Alert.Button.default(Text("OK")))
 }

@@ -18,7 +18,7 @@ struct AccountView: View {
                     TextField("Mail", text: $viewModel.email).keyboardType(.emailAddress).autocorrectionDisabled()
                     DatePicker("Bithday", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact)
                     Button("Save Changes") {
-                        //
+                        viewModel.setUser()
                     }
                 }
                 
@@ -28,6 +28,9 @@ struct AccountView: View {
                 }
                 
             }.navigationTitle("Account")
+                .alert(item: $viewModel.alertItem) { aleartItem in
+                    Alert(title: aleartItem.title, message: aleartItem.message, dismissButton: aleartItem.dissmissbutton)
+                }
         }
     }
 }
