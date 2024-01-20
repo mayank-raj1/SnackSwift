@@ -9,8 +9,15 @@ import SwiftUI
 
 struct AppetizerDetailedView: View {
     var appetizer: Appetizer
-    @EnvironmentObject var order: Order
+    var order: Order = Order()
+    @State var item: Item
     @Binding var isShowingView: Bool
+    
+    init(appetizer: Appetizer, isShowingView: Binding<Bool>) {
+        self.appetizer = appetizer
+        self.item = Item(id: appetizer.id, appetizer: appetizer, quantity: 0)
+        self.isShowingView = isShowingView
+    }
     var body: some View {
         VStack{
             AppetizerRemoteImage(imageURL: appetizer.imageURL).frame(height: 220)
@@ -33,13 +40,17 @@ struct AppetizerDetailedView: View {
                 }
             }.padding()
             Spacer()
-            Button(action: {
-                order.add(appetizer)
+            if (item.quantity == 0){ Button(action: {
+                item.quantity = 1
+                //order.add(appetizer)
                 isShowingView = false
             }, label: {
                 Text("$\(appetizer.price.toString2(2)) - Add To Order").font(.title2).bold().padding(5)
             }).buttonStyle(.borderedProminent).tint(Color.orange).padding()
-        }.frame(width: 350, height: 520)
+            }
+            if (item.quantity > 0){
+                Stepper("Qunaity", value: $item.quantity)
+            }        }.frame(width: 350, height: 520)
             .background(Color(.systemBackground))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(radius: 10).overlay(alignment: .topTrailing) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5C7F5432B5C604200B0B743 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7F5422B5C604200B0B743 /* Item.swift */; };
 		E5F559E12B52ACA90092D819 /* SnackSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */; };
 		E5F559E32B52ACA90092D819 /* SnackSwiftTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E22B52ACA90092D819 /* SnackSwiftTabView.swift */; };
 		E5F559E52B52ACAB0092D819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F559E42B52ACAB0092D819 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5C7F5422B5C604200B0B743 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E5F559DD2B52ACA90092D819 /* SnackSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackSwiftApp.swift; sourceTree = "<group>"; };
 		E5F559E22B52ACA90092D819 /* SnackSwiftTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackSwiftTabView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E5F559F52B52CE460092D819 /* Appetizer.swift */,
 				E5F55A142B5A8E440092D819 /* User.swift */,
 				E5F55A172B5B02CB0092D819 /* Order.swift */,
+				E5C7F5422B5C604200B0B743 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C7F5432B5C604200B0B743 /* Item.swift in Sources */,
 				E5F55A072B54939C0092D819 /* AlertItem.swift in Sources */,
 				E5F55A112B57E73E0092D819 /* AccountViewModel.swift in Sources */,
 				E5F55A012B5466240092D819 /* APerror.swift in Sources */,

@@ -26,6 +26,6 @@ struct SnackSwiftTabView: View {
     }
 }
 
-#Preview {
-    SnackSwiftTabView()
-}
+//#Preview {
+//    SnackSwiftTabView()
+//}

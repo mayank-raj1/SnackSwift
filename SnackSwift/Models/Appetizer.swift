@@ -32,4 +32,8 @@ struct MocData{
                                                protein: 99,
                                                carbs: 99)
     static let sampleAppetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
+    
+    static let sampleItem = Item(id: 002, appetizer: sampleAppetizer, quantity: 2)
+    
+    static let sampleItems = [sampleItem, sampleItem, sampleItem]
 }

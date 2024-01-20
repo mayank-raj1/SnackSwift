@@ -16,7 +16,7 @@ struct OrderView: View {
                 VStack{
                     List{
                         ForEach(order.items) { appetizer in
-                            AppetizerCellView(appetizer: appetizer)
+//                            AppetizerCellView(appetizer: appetizer)
                         }.onDelete(perform: { indexSet in
                             order.items.remove(atOffsets: indexSet)
                         })
