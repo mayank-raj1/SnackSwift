@@ -12,15 +12,17 @@ final class Order: ObservableObject{
     @Published var items: [Item] = MocData.sampleItems
     
     func add(_ item: Item) {
+        print("NJ2")
         if (!items.contains(where: { appetizer in
-            return appetizer.appetizer == item.appetizer
+            return appetizer.id == item.id
         })){
+            print("NJ")
             items.append(item)
         }
     }
     
     var total: Double {
-        items.reduce(0) {$0 + $1.appetizer.price}
+        items.reduce(0) {$0 + $1.appetizer!.price}
     }
     
 }

@@ -34,6 +34,7 @@ struct MocData{
     static let sampleAppetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
     
     static let sampleItem = Item(id: 002, appetizer: sampleAppetizer, quantity: 2)
+    static let sample = Item(id: 003, appetizer: sampleAppetizer, quantity: 2)
     
-    static let sampleItems = [sampleItem, sampleItem, sampleItem]
+    static let sampleItems = [sample, sample]
 }

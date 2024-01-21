@@ -9,15 +9,10 @@ import SwiftUI
 
 struct AppetizerDetailedView: View {
     var appetizer: Appetizer
-    var order: Order = Order()
-    @State var item: Item
+    @ObservedObject var order: Order = Order()
+    @State var item: Item = Item(quantity: 0)
     @Binding var isShowingView: Bool
     
-    init(appetizer: Appetizer, isShowingView: Binding<Bool>) {
-        self.appetizer = appetizer
-        self.item = Item(id: appetizer.id, appetizer: appetizer, quantity: 0)
-        self.isShowingView = isShowingView
-    }
     var body: some View {
         VStack{
             AppetizerRemoteImage(imageURL: appetizer.imageURL).frame(height: 220)
@@ -40,20 +35,21 @@ struct AppetizerDetailedView: View {
                 }
             }.padding()
             Spacer()
-            if (item.quantity == 0){ Button(action: {
-                item.quantity = 1
-                //order.add(appetizer)
-                isShowingView = false
-            }, label: {
-                Text("$\(appetizer.price.toString2(2)) - Add To Order").font(.title2).bold().padding(5)
-            }).buttonStyle(.borderedProminent).tint(Color.orange).padding()
+            if let _ = item.appetizer, item.quantity > 0{
+                Stepper("Quantity: \(item.quantity)", value: $item.quantity).tint(.orange).frame(width: 200).padding(.bottom, 25)
+            } else{
+                Button("$\(appetizer.price.toString2(2)) - Add to card ") {
+                    item.id = appetizer.id + 431
+                    item.appetizer = appetizer
+                    item.quantity = 1
+                    order.add(item)
+                }.buttonStyle(.borderedProminent).tint(.orange).controlSize(.large).padding(.bottom, 15)
             }
-            if (item.quantity > 0){
-                Stepper("Qunaity", value: $item.quantity)
-            }        }.frame(width: 350, height: 520)
+        }.frame(width: 350, height: 520)
             .background(Color(.systemBackground))
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .shadow(radius: 10).overlay(alignment: .topTrailing) {
+            .shadow(radius: 10)
+            .overlay(alignment: .topTrailing) {
                 Button(action: {
                     isShowingView = false
                 }, label: {

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct OrderView: View {
     @State var appetizers = MocData.sampleAppetizers
-    @EnvironmentObject var order: Order
+    @State var order: Order = Order()
     var body: some View {
         NavigationStack{
             ZStack{
                 VStack{
                     List{
-                        ForEach(order.items) { appetizer in
-//                            AppetizerCellView(appetizer: appetizer)
+                        ForEach(order.items) { item in
+                            AppetizerCellView(appetizer: item.appetizer ?? MocData.sampleAppetizer)
                         }.onDelete(perform: { indexSet in
                             order.items.remove(atOffsets: indexSet)
                         })
