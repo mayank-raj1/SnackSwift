@@ -8,39 +8,36 @@
 import SwiftUI
 
 struct AppetizerDetailedView: View {
-    var appetizer: Appetizer
-    @ObservedObject var order: Order = Order()
-    @State var item: Item = Item(quantity: 0)
+    @EnvironmentObject var order: Order
+    @ObservedObject var item: Item
     @Binding var isShowingView: Bool
     
     var body: some View {
         VStack{
-            AppetizerRemoteImage(imageURL: appetizer.imageURL).frame(height: 220)
+            AppetizerRemoteImage(imageURL: item.appetizer.imageURL).frame(height: 220)
             VStack{
-                Text(appetizer.name).font(.title)
-                Text(appetizer.description).multilineTextAlignment(.center).padding()
+                Text(item.appetizer.name).font(.title)
+                Text(item.appetizer.description).multilineTextAlignment(.center).padding()
                 HStack(spacing: 40){
                     VStack(spacing: 10){
                         Text("Calories").font(.subheadline).bold()
-                        Text("\(appetizer.carbs)").foregroundStyle(Color.secondary)
+                        Text("\(item.appetizer.carbs)").foregroundStyle(Color.secondary)
                     }
                     VStack(spacing: 10){
                         Text("Carbs").font(.subheadline).bold()
-                        Text("\(appetizer.carbs)").foregroundStyle(Color.secondary)
+                        Text("\(item.appetizer.carbs)").foregroundStyle(Color.secondary)
                     }
                     VStack(spacing: 10){
                         Text("Protein").font(.subheadline).bold()
-                        Text("\(appetizer.protein)").foregroundStyle(Color.secondary)
+                        Text("\(item.appetizer.protein)").foregroundStyle(Color.secondary)
                     }
                 }
             }.padding()
             Spacer()
-            if let _ = item.appetizer, item.quantity > 0{
+            if item.quantity > 0{
                 Stepper("Quantity: \(item.quantity)", value: $item.quantity).tint(.orange).frame(width: 200).padding(.bottom, 25)
             } else{
-                Button("$\(appetizer.price.toString2(2)) - Add to card ") {
-                    item.id = appetizer.id + 431
-                    item.appetizer = appetizer
+                Button("$\(item.appetizer.price.toString2(2)) - Add to card ") {
                     item.quantity = 1
                     order.add(item)
                 }.buttonStyle(.borderedProminent).tint(.orange).controlSize(.large).padding(.bottom, 15)
@@ -64,7 +61,8 @@ struct AppetizerDetailedView: View {
 }
 
 
-
+var order = Order()
 #Preview {
-    AppetizerDetailedView(appetizer: MocData.sampleAppetizer, isShowingView: .constant(true))
+    
+    AppetizerDetailedView(item: MocData.sampleItem, isShowingView: .constant(true)).environmentObject(order)
 }

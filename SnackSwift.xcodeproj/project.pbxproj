@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5B78BFF2B5D990D004E4FCF /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B78BFE2B5D990D004E4FCF /* ItemCellView.swift */; };
 		E5C7F5432B5C604200B0B743 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7F5422B5C604200B0B743 /* Item.swift */; };
 		E5F559E12B52ACA90092D819 /* SnackSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */; };
 		E5F559E32B52ACA90092D819 /* SnackSwiftTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E22B52ACA90092D819 /* SnackSwiftTabView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5B78BFE2B5D990D004E4FCF /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
 		E5C7F5422B5C604200B0B743 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E5F559DD2B52ACA90092D819 /* SnackSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackSwiftApp.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				E5F55A062B54939C0092D819 /* AlertItem.swift */,
 				E5F55A082B54A9E30092D819 /* RemoteImage.swift */,
 				E5F55A192B5B0C1E0092D819 /* AFButton.swift */,
+				E5B78BFE2B5D990D004E4FCF /* ItemCellView.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B78BFF2B5D990D004E4FCF /* ItemCellView.swift in Sources */,
 				E5C7F5432B5C604200B0B743 /* Item.swift in Sources */,
 				E5F55A072B54939C0092D819 /* AlertItem.swift in Sources */,
 				E5F55A112B57E73E0092D819 /* AccountViewModel.swift in Sources */,

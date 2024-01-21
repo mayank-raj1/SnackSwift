@@ -9,20 +9,16 @@ import Foundation
 import SwiftUI
 
 class Item: Identifiable, ObservableObject{
-    var id: Int?
-    var appetizer: Appetizer?
+    var id: UUID = UUID()
+    var appetizer: Appetizer
     @Published var quantity: Int
     
-    init(id: Int? = 2421, appetizer: Appetizer? = nil, quantity: Int) {
-        self.id = id
+    init(appetizer: Appetizer, quantity: Int) {
         self.appetizer = appetizer
         self.quantity = quantity
     }
     
     var itemTotal: Double{
-        guard let appetizer else{
-            return 0
-        }
         return appetizer.price * Double(quantity)
     }
 }

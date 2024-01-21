@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppetizerListView: View {
     @StateObject var viewModel: AppetizerListViewModel = AppetizerListViewModel()
-    
+    @EnvironmentObject var order: Order
     var body: some View {
         ZStack{
             NavigationStack{
@@ -26,7 +26,8 @@ struct AppetizerListView: View {
             }.blur(radius: viewModel.isShowingDetailed ? 10 : 0).disabled(viewModel.isShowingDetailed ? true : false)
             
             if viewModel.isShowingDetailed{
-                AppetizerDetailedView(appetizer: viewModel.detailedShowingAppetizer ?? MocData.sampleAppetizer, isShowingView: $viewModel.isShowingDetailed)
+                //AppetizerDetailedView(appetizer: viewModel.detailedShowingAppetizer ?? MocData.sampleAppetizer, isShowingView: $viewModel.isShowingDetailed)
+                AppetizerDetailedView(item: order.getItem(for: viewModel.detailedShowingAppetizer ?? MocData.sampleAppetizer), isShowingView: $viewModel.isShowingDetailed)
             }
             
             if viewModel.isLoading{ ProgressView().tint(Color.orange).scaleEffect(CGSize(width: 2.0, height: 2.0))
@@ -38,8 +39,9 @@ struct AppetizerListView: View {
     
 }
 
+
 #Preview {
-    AppetizerListView()
-} 
+    AppetizerListView().environmentObject(order)
+}
 
 

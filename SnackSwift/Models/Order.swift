@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 final class Order: ObservableObject{
-    @Published var items: [Item] = MocData.sampleItems
+    @Published var items: [Item] = []
     
     func add(_ item: Item) {
         print("NJ2")
@@ -22,7 +22,16 @@ final class Order: ObservableObject{
     }
     
     var total: Double {
-        items.reduce(0) {$0 + $1.appetizer!.price}
+        items.reduce(0) {$0 + $1.appetizer.price}
+    }
+    
+    func getItem(for appetizer: Appetizer) -> Item{
+        var item: Item
+        item = items.first(where: { orderItem in
+            return orderItem.appetizer.id == appetizer.id
+        }) 
+        ?? Item(appetizer: appetizer, quantity: 0)
+        return item
     }
     
 }
