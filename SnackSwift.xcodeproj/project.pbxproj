@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E5B78BFF2B5D990D004E4FCF /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B78BFE2B5D990D004E4FCF /* ItemCellView.swift */; };
+		E5C0F3992B5F133200AA8AB4 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = E5C0F3982B5F133200AA8AB4 /* 1.gif */; };
 		E5C7F5432B5C604200B0B743 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7F5422B5C604200B0B743 /* Item.swift */; };
 		E5F559E12B52ACA90092D819 /* SnackSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */; };
 		E5F559E32B52ACA90092D819 /* SnackSwiftTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F559E22B52ACA90092D819 /* SnackSwiftTabView.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		E5B78BFE2B5D990D004E4FCF /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
+		E5C0F3982B5F133200AA8AB4 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 1.gif; path = ../../../../../../Desktop/1.gif; sourceTree = "<group>"; };
 		E5C7F5422B5C604200B0B743 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E5F559DD2B52ACA90092D819 /* SnackSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F559E02B52ACA90092D819 /* SnackSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackSwiftApp.swift; sourceTree = "<group>"; };
@@ -70,9 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5C0F3972B5F131D00AA8AB4 /* screenShots */ = {
+			isa = PBXGroup;
+			children = (
+				E5C0F3982B5F133200AA8AB4 /* 1.gif */,
+			);
+			path = screenShots;
+			sourceTree = "<group>";
+		};
 		E5F559D42B52ACA90092D819 = {
 			isa = PBXGroup;
 			children = (
+				E5C0F3972B5F131D00AA8AB4 /* screenShots */,
 				E5F559DF2B52ACA90092D819 /* SnackSwift */,
 				E5F559DE2B52ACA90092D819 /* Products */,
 			);
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F559E82B52ACAB0092D819 /* Preview Assets.xcassets in Resources */,
+				E5C0F3992B5F133200AA8AB4 /* 1.gif in Resources */,
 				E5F559E52B52ACAB0092D819 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

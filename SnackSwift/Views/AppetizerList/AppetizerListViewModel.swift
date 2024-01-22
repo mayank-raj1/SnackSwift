@@ -15,8 +15,8 @@ final class AppetizerListViewModel: ObservableObject {
     @Published var detailedShowingAppetizer: Appetizer?
     
     func loadAppetisers() {
+        self.isLoading = true
         NetworkManager.shared.getAppetizers { result in
-            self.isLoading = true
             DispatchQueue.main.async {
                 self.isLoading = false
                 switch result{

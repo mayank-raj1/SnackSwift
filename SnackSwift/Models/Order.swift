@@ -22,7 +22,7 @@ final class Order: ObservableObject{
     }
     
     var total: Double {
-        items.reduce(0) {$0 + $1.appetizer.price}
+        items.reduce(0) {$0 + $1.itemTotal}
     }
     
     func getItem(for appetizer: Appetizer) -> Item{

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OrderView: View {
     @EnvironmentObject var order: Order
+    @State var alertItem: AlertItem?
     var body: some View {
         NavigationStack{
             ZStack{
@@ -20,20 +21,23 @@ struct OrderView: View {
                             order.items.remove(atOffsets: indexSet)
                         })
                     }.listStyle(.plain)
-                    Button(action: {
-                        
-                    }, label: {
-                        AFButton(text: "Place order").padding(.bottom)
-                    })
+                    Button("$\(order.total.toString2(2)) - Place Order") {
+                        order.items = []
+                        alertItem = AlertContext.orderPlaced
+                    }.buttonStyle(.borderedProminent).tint(.orange).controlSize(.large)
                 }.navigationTitle("🛎️ Order")
                 if order.items.isEmpty{
                     EmptyState(message: "You have no appetizers in your cart.\n Please add an appetizer!")
                 }
             }
+        }.alert(item: $alertItem) { aleartItem in
+            Alert(title: aleartItem.title, message: aleartItem.message, dismissButton: aleartItem.dismissbutton)
         }
     }
 }
 
+var order1 = Order()
+
 #Preview {
-    OrderView()
+    OrderView().environmentObject(order1)
 }

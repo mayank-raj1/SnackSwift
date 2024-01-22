@@ -46,5 +46,8 @@ struct AlertContext{
     static let failToLoadDetails = AlertItem(title: Text("Error loading details"),
                                             message: Text("We faced an error in loadin your account details."),
                                             dismissbutton: Alert.Button.default(Text("Ok")))
+    static let orderPlaced = AlertItem(title: Text("Order Placed"),
+                                            message: Text("You order has been placed successfuly.\n Your food should reach you in no time!"),
+                                            dismissbutton: Alert.Button.default(Text("Yay")))
     
 }
