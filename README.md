@@ -14,6 +14,12 @@ Snack Swift is an iOS app created to enhance knowledge and proficiency in Swift 
 - Swift 5.9 and SwiftUI 5: Leveraging the latest Swift and SwiftUI versions for enhanced development.
 - API Integration: Dynamic integration with an open API for up-to-date appetizer data.
 - State-of-the-Art Swift Concepts: Implementation of key Swift concepts like @State, @Binding, @ObservableObject, and @AppStorage for efficient data management.
+
+## Demonstrations
+
+<img src="https://github.com/mayank-raj1/SnackSwift/blob/c3310a0b073957b9b1481f6dcc1bfdbc14307cf4/screenShots/1.gif" width="200px"/>
+
+
 ## Installation
 
 To run Snack Swift locally, follow these simplified steps:
